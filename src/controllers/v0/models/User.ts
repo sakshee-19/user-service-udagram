@@ -20,5 +20,4 @@ export class User extends Model<User> {
           email: this.email
         }
       }
-
 }
