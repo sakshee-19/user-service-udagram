@@ -1,15 +1,18 @@
 import {Request, Response, Router} from 'express'
 import { User } from '../models/User';
+import { AuthRouter } from './auth.router';
 
 const router: Router = Router();
+
+router.use('/auth', AuthRouter);
 
 router.get("/", (req: Request, res: Response) => {
     // res.send()
 });
 
-router.get(":id", (req: Request, res:Response) => {
+router.get("/:id", async(req: Request, res:Response) => {
     const {id }= req.params;
-    const item = User.findByPk(id);
+    const item = await User.findByPk(id);
     if(item){
         res.send(item);
     }

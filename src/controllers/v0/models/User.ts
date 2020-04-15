@@ -7,13 +7,13 @@ export class User extends Model<User> {
     public email!: string;
 
     @Column
-    password_hash: string;
+    public password_hash: string;
 
     @CreatedAt
-    creationDate: Date;
+    public createdAt: Date;
 
     @UpdatedAt
-    updateDate: Date;
+    public updatedAt: Date;
 
     short() {
         return {
