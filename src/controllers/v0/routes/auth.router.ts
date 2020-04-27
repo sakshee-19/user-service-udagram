@@ -48,7 +48,7 @@ router.get("/verification",
         return res.status(200).send({ auth: true, message: 'Authenticated.' });
 })
 
-router.post('/login', requireAuth, async(req: Request, res: Response) => {
+router.post('/login', async(req: Request, res: Response) => {
     const {email, password} = req.body;
     if(!email || !password) {
         res.status(400).send({message: " email and password can not be null"});
