@@ -3,7 +3,7 @@ export const config = {
       "username": process.env.POSTGRES_USERNAME,
       "password": process.env.POSTGRES_PASSWORD,
       "database": process.env.POSTGRES_DATABASE,
-      "port":process.env.POSTGRES_PORT,
+      "port": process.env.POSTGRES_PORT,
       "host": process.env.POSTGRES_HOST,
       "dialect": process.env.POSTGRES_DIALECT,
       "aws_region": process.env.AWS_REGION,

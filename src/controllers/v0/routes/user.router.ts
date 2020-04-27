@@ -15,9 +15,9 @@ router.get("/:id", async(req: Request, res:Response) => {
     const item = await User.findByPk(id);
     if(item){
         res.send(item);
-    }
+    } else {
     res.send("couldn't find the user");
-
+}
 });
 
 export const UserRouter : Router = router;
