@@ -9,7 +9,7 @@ RUN npm ci
 # Copy the rest of the code
 COPY . .
 # Expose the port 
-EXPOSE 8000
+EXPOSE 8001
 
 # Define the command that should be executed
 CMD [ "npm", "run", "dev" ]

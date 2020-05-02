@@ -10,8 +10,9 @@ import { IndexRouter } from "./controllers/v0/routes";
   // await sequelize.sync();
 
   const app = express();
-  const port = process.env.PORT || 8001;
+  const port = 8001;
 // parse requests of content-type - application/json
+  console.log("running server .ts in port "+port);
 
   app.use(bodyParser.json());
 
